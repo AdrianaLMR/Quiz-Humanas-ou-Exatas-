@@ -1,0 +1,59 @@
+algoritmo "quiz"
+// Função :
+// Autor :
+// Data : 18/10/2023
+// Seção de Declarações 
+var
+  cont_exatas, cont_humanas, resposta : inteiro
+inicio
+     escreval("===============================================")
+     escreval("      Quiz- Ciência humanas ou exatas?         ")
+     escreval("===============================================")
+     escreval("Digite 1 para sim e 2 para não seguido de enter")
+     escreval("-----------------------------------------------")
+     escreval("")
+     
+     escreva("Você gosta de matemática?")
+     leia(resposta)
+     se resposta = 1 entao
+       cont_exatas <- cont_exatas + 1
+     fimse
+       
+     escreva("Você gosta de ler?")
+     leia(resposta)
+     se resposta = 1 entao
+       cont_humanas <- cont_humanas +1
+     fimse
+       
+     escreva("Você gosta de raciocínio lógico?")
+     leia(resposta)
+     se resposta = 1 entao
+       cont_exatas <- cont_exatas + 1
+     fimse
+       
+     escreva("Você gosta de questões sociais?")
+     leia(resposta)
+     se resposta = 1 entao
+       cont_humanas <- cont_humanas + 1
+     fimse
+     
+     escreval("===============================================")
+     escreval("          Resultado do teste                   ")
+     escreval("===============================================")
+     
+     se cont_humanas > cont_exatas entao
+        escreval("Você têm tendência a ciências humanas")
+     senao
+        se cont_exatas > cont_humanas entao
+           escreval("Você têm tendência a ciências exatas")
+        senao
+            escreval("Houve empate na pontuação.")
+        fimse
+    fimse
+    
+    escreval("Pontuação de humanas: ", cont_humanas)
+    escreval("Pontuação de exatas: ", cont_exatas)
+fimalgoritmo
+
+
+
